@@ -1,0 +1,19 @@
+[versions]
+agp = "8.5.1"
+moshi = "1.15.1"
+kotlin = "2.0.0"
+ksp = "2.0.0-1.0.24"
+
+[libraries]
+moshi-base = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
+moshi-adapters = { module = "com.squareup.moshi:moshi-adapters", version.ref = "moshi" }
+moshi-codegen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshi" }
+
+[bundles]
+moshi = ["moshi-base", "moshi-adapters"]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
